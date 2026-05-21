@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nisha More | Python Backend Developer</title>
+   
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+           
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-container">
+            <h3 class="logo">Nisha More</h3>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    
+<header>
+    <h1>Hello, I'm Nisha More</h1>
+    <h2>Python Backend Developer</h2>
+    <p>Building secure, scalable and clean backend applications.</p>
+
+    <a href="{{ url_for('static', filename='resume/Nisha-More-Resume.pdf') }}" 
+    class="resume-btn" 
+    download>
+    <i class="fas fa-download"></i> Download Resume
+    </a>
+</header>
+
+<section id="about">
+    <div class="container">
+    <h2>About Me</h2>
+    <p>
+        I am a Python backend developer with hands-on experience in Flask, REST APIs,
+        PostgreSQL and MySQL. I enjoy building clean and structured backend systems.
+    </p>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="container">
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>Python</span>
+        <span>Flask</span>
+        <span>PostgreSQL</span>
+        <span>MySQL</span>
+        <span>REST APIs</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Git</span>
+    </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h2>Projects</h2>
+
+        <div class="project-grid">
+
+            <div class="slider">
+
+                <img src="{{ url_for('static', filename='images/tp-dashboard.png') }}" class="slide active">
+                <img src="{{ url_for('static', filename='images/tp-course-wise-placement.png') }}" class="slide">
+                <img src="{{ url_for('static', filename='images/tp-students.png') }}" class="slide">
+
+                <div class="dots">
+                    <span class="dot" onclick="goToSlide(0)"></span>
+                    <span class="dot" onclick="goToSlide(1)"></span>
+                    <span class="dot" onclick="goToSlide(2)"></span>
+                </div>
+
+                
+            </div>
+
+            <div class="project-card">
+                
+                <h3>Training & Placement Management System</h3>
+            
+                <p>
+                    A full-stack web application built using Flask to manage student data and track placement status.
+                    Includes filtering, search, pagination, and CSV export features.
+                </p>
+            
+                <p><strong>Tech Stack:</strong> Python, Flask, SQLAlchemy, Bootstrap</p>
+            
+                <a href="https://tp-system.onrender.com" target="_blank" class="btn btn-success">
+                    Live Demo
+                </a>
+            
+
+                <a href="https://github.com/nishamore-UI" target="_blank" class="btn btn-dark">
+                    GitHub
+                </a>
+            
+            </div>
+
+           <!--<div class="project-card">
+                <h3>E-Commerce Website</h3>
+                <p>Full-stack e-commerce application with authentication and cart functionality.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Blackjack Game</h3>
+                <p>Interactive game built using Python logic and frontend integration.</p>
+            </div> -> -->
+
+        </div>
+    </div>
+</section>
+
+
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <!-- ICONS -->
+    <div class="contact-icons">
+
+        <!-- Email -->
+        <a href="mailto:nisha01.more@gmail.com" class="icon" title="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+    
+        <!-- Phone -->
+        <a href="tel:+918999612108" class="icon" title="Call">
+            <i class="fas fa-phone"></i>
+        </a>
+    
+        <!-- GitHub -->
+        <a href="https://github.com/nishamore-UI" target="_blank" class="icon" title="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+    
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/nisha-more-2991251a0" target="_blank" class="icon" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    
+        <!-- Location -->
+        <a href="https://maps.google.com/?q=Pune,India" target="_blank" class="icon" title="Location">
+            <i class="fas fa-map-marker-alt"></i>
+        </a>
+    
+    </div>
+    
+    <!-- Hidden Info -->
+    <div id="contact-info" class="contact-info"></div>
+
+</section>
+
+<footer>
+    <p>© 2026 Nisha More | Python Backend Developer</p>
+</footer>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
