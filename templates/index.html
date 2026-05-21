@@ -2,7 +2,10 @@
 <html>
 <head>
     <title>Nisha More | Python Backend Developer</title>
-   
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
            
@@ -22,19 +25,42 @@
     </nav>
     
     
-<header>
-    <h1>Hello, I'm Nisha More</h1>
-    <h2>Python Backend Developer</h2>
-    <p>Building secure, scalable and clean backend applications.</p>
+    <header class="hero">
 
-    <a href="{{ url_for('static', filename='resume/Nisha-More-Resume.pdf') }}" 
-    class="resume-btn" 
-    download>
-    <i class="fas fa-download"></i> Download Resume
-    </a>
-</header>
+        <div class="hero-content">
+    
+            <p class="hero-tag">BACKEND DEVELOPER</p>
+    
+            <h1>Hi, I'm <span>Nisha More</span> 👋</h1>
+    
+            <h2>
+                <span id="typing-text"></span>
+            </h2>
+    
+            <p class="hero-description">
+                Passionate about creating clean APIs, structured backend systems,
+                and modern web applications.
+            </p>
+    
+            <div class="hero-buttons">
+    
+                <a href="#projects" class="btn btn-success">
+                    View Projects
+                </a>
+    
+                <a href="{{ url_for('static', filename='resume/Nisha_More_Resume.pdf') }}"
+                   download
+                   class="btn btn-dark">
+                    Download Resume
+                </a>
+    
+            </div>
+    
+        </div>
+    
+    </header>>
 
-<section id="about">
+<section id="about" class="reveal">
     <div class="container">
     <h2>About Me</h2>
     <p>
@@ -44,7 +70,7 @@
     </div>
 </section>
 
-<section id="skills">
+<section id="skills" class="reveal">
     <div class="container">
     <h2>Skills</h2>
     <div class="skills">
@@ -60,7 +86,7 @@
     </div>
 </section>
 
-<section id="projects">
+<section id="projects" class="reveal">
     <div class="container">
         <h2>Projects</h2>
 
@@ -118,7 +144,7 @@
 </section>
 
 
-<section id="contact">
+<section id="contact" class="reveal">
     <h2>Contact Me</h2>
 
     <!-- ICONS -->

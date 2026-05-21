@@ -10,9 +10,16 @@ html {
     box-sizing: border-box;
 }
 
+/* paragraphs */
+p {
+    color: #6b7280;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
 /* Body */
 body {
-    font-family: 'Inter', 'Segoe UI', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: #0f172a;
     color: #e2e8f0;
     line-height: 1.6;
@@ -85,12 +92,13 @@ header h2 {
 
 /* Sections */
 section {
-    padding: 80px 0;
+    padding: 110px 20px;
 }
 
 section h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
+    font-size: 38px;
+    font-size: 700;
+    margin-bottom: 25px;
     color: #38bdf8;
     text-align: center;
 }
@@ -125,12 +133,15 @@ section h2 {
     gap: 25px;
 }
 
+
 .project-card {
-    background: #1e293b;
-    padding: 25px;
-    border-radius: 16px;
-    transition: 0.3s;
-    border: 1px solid #334155;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 24px;
+    padding: 30px;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
 .project-card h3 {
@@ -144,7 +155,7 @@ section h2 {
 
 .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
 }
 
 /* Project Buttons */
@@ -225,63 +236,43 @@ footer {
 }
 
 /* Live Demo Button */
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
 .btn-success {
-    background-color: #198754;
+    background: linear-gradient(135deg, #38bdf8, #2563eb);
     color: white;
-    padding: 8px 16px;
-    border-radius: 6px;
-    margin-right: 10px;
-    transition: 0.3s;
+   
 }
 
 .btn-success:hover {
-    background-color: #157347;
+    background: linear-gradient(135deg, #0ea5e9, #1d4ed8);
 }
 
 /* GitHub Button */
 .btn-dark {
-    background-color: #111827;
+    background: rgba(255,255,255,0.08);
     color: white;
-    padding: 8px 16px;
-    border-radius: 6px;
-    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
-.btn-dark:hover {
-    background-color: #000;
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(56,189,248,0.4);
 }
+
 .project-card a {
     text-decoration: none;   /* remove underline */
     display: inline-block;
     margin-top: 10px;
 }
 
-/* Live Demo Button */
-.btn-success {
-    background-color: #198754;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 6px;
-    margin-right: 10px;
-    transition: 0.3s;
-}
-
-.btn-success:hover {
-    background-color: #157347;
-}
-
-/* GitHub Button */
-.btn-dark {
-    background-color: #111827;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
-.btn-dark:hover {
-    background-color: #000;
-}
 
 .project-img {
     width: 100%;
@@ -406,4 +397,124 @@ footer {
 
 .resume-btn:hover::after {
     left: 100%;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    background:
+        radial-gradient(circle at top left, rgba(56,189,248,0.15), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(37,99,235,0.15), transparent 30%),
+        #0f172a;
+}
+
+.hero-content {
+    max-width: 850px;
+    animation: fadeUp 1s ease;
+}
+
+.hero-tag {
+    color: #38bdf8;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 72px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: white;
+}
+
+.hero h1 span {
+    color: #38bdf8;
+}
+
+.hero h2 {
+    font-size: 28px;
+    color: #cbd5e1;
+    font-weight: 400;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.hero-description {
+    font-size: 18px;
+    color: #94a3b8;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+}
+
+/* Scroll Reveal Animation */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#typing-text {
+    color: #38bdf8;
+    border-right: 3px solid #38bdf8;
+    padding-right: 5px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+
+    50% {
+        border-color: transparent;
+    }
+
 }
