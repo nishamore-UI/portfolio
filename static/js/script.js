@@ -73,9 +73,9 @@ function revealSections() {
 
 const texts = [
     "Python Backend Developer",
-    "Flask Developer",
-    "REST API Developer",
-    "Backend Enthusiast"
+    "Flask & REST API Developer",
+    "SQL & Database Enthusiast",
+    "Building Scalable Backend Systems"
 ];
 
 let count = 0;
@@ -127,4 +127,4 @@ function erase() {
 
 }
 
-type();
+type(); 

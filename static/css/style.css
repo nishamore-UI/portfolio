@@ -494,11 +494,24 @@ footer {
 /* Scroll Reveal Animation */
 
 .reveal {
-    opacity: 0;
-    transform: translateY(60px);
+    opacity: 1;
+    transform: translateY(0);
     transition: all 1s ease;
 }
 
+@media (min-width: 768px) {
+
+    .reveal {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
@@ -517,4 +530,24 @@ footer {
         border-color: transparent;
     }
 
+}
+
+.api-section {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.api-section h4 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.api-section ul {
+    padding-left: 18px;
+}
+
+.api-section li {
+    color: #cbd5e1;
+    margin-bottom: 8px;
+    font-size: 15px;
 }
