@@ -551,3 +551,14 @@ footer {
     margin-bottom: 8px;
     font-size: 15px;
 }
+
+.skill-category {
+    margin-bottom: 50px;
+}
+
+.skill-category h3 {
+    color: #38bdf8;
+    margin-bottom: 18px;
+    font-size: 22px;
+    text-align: center;
+}
